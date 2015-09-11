@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButton;
 @property NSString *newsSource;
 @property NSString *sectionTitle;
+@property Article *selectedArticle;
 
 @end

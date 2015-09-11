@@ -87,12 +87,16 @@
     cell.titleLabel.text = article.title;
     cell.authorLabel.text = article.author;
     cell.snippetLabel.text = article.snippet;
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // remove cell selection
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // Assign selected article.
+    self.selectedArticle = self.articles[indexPath.row];
     
     [self performSegueWithIdentifier:@"ShowDetail" sender:self];
 }
@@ -104,9 +108,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
-        Article *object = self.articles[indexPath.row];
+        Article *object = self.selectedArticle;
 
         
         UINavigationController *navController = segue.destinationViewController;
