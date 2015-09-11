@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -198,20 +199,35 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e47-8D-2N9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="-65" width="600" height="865"/>
-                                </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e47-8D-2N9" firstAttribute="top" secondItem="YJd-gG-h5S" secondAttribute="topMargin" constant="-67" id="36M-X1-0lv"/>
+                            <constraint firstAttribute="trailing" secondItem="e47-8D-2N9" secondAttribute="trailing" id="A8P-nW-jEA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="e47-8D-2N9" secondAttribute="bottom" constant="-44" id="Vir-cn-hTj"/>
+                            <constraint firstItem="e47-8D-2N9" firstAttribute="leading" secondItem="YJd-gG-h5S" secondAttribute="leading" id="yLI-H2-ZFf"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="e47-8D-2N9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="36M-X1-0lv"/>
+                                <exclude reference="A8P-nW-jEA"/>
+                                <exclude reference="Vir-cn-hTj"/>
+                                <exclude reference="yLI-H2-ZFf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="e47-8D-2N9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="36M-X1-0lv"/>
+                                <include reference="A8P-nW-jEA"/>
+                                <include reference="Vir-cn-hTj"/>
+                                <include reference="yLI-H2-ZFf"/>
                             </mask>
                         </variation>
                     </view>
@@ -249,7 +265,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="XG5-W5-AuL" id="y23-b0-vFd"/>
-                        <segue destination="EEc-6Z-huB" kind="showDetail" id="N2X-na-tUw"/>
+                        <segue destination="EEc-6Z-huB" kind="show" identifier="ShowDetail" id="N2X-na-tUw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5x-xN-103" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -301,7 +317,7 @@
         <image name="menu-icon" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BRy-yW-lQl"/>
+        <segue reference="C66-rg-gM7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
 </document>

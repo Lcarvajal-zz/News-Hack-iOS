@@ -89,18 +89,32 @@
     cell.snippetLabel.text = article.snippet;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //self.tableView.delegate = self;
+    //self.tableView.dataSource = self;
+    
+    // remove cell selection
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:@"ShowDetail" sender:self];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         Article *object = self.articles[indexPath.row];
 
         
-        ArticleViewController *controller = segue.destinationViewController;
+        UINavigationController *navController = segue.destinationViewController;
+        
+        ArticleViewController *controller = (ArticleViewController*)navController.topViewController;
         controller.articleTitle = object.title;
         controller.articleURL = object.url;
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
