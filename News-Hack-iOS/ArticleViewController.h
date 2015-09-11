@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) NSString* articleTitle;
 @property (strong, nonatomic) NSString* articleURL;
+@property (strong, nonatomic) NSString* originalURL;
 @property (weak, nonatomic) IBOutlet UIWebView *articleWebView;
+
+- (IBAction)shareButton:(id)sender;
 
 @end

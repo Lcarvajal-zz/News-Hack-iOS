@@ -77,6 +77,8 @@
 		806B31C71BA30F8000163FFC /* DetailedArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedArticleTableViewCell.xib; sourceTree = "<group>"; };
 		806B31DC1BA325C800163FFC /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		806B31DD1BA325C800163FFC /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		806B31E31BA3333E00163FFC /* ShareArticleAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareArticleAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		806B31F71BA333EE00163FFC /* ShareAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		806B31881BA2FA8100163FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31E01BA3333E00163FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31F41BA333EE00163FFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,6 +132,8 @@
 			children = (
 				806B31721BA2FA8000163FFC /* News-Hack-iOS.app */,
 				806B318B1BA2FA8100163FFC /* News-Hack-iOSTests.xctest */,
+				806B31E31BA3333E00163FFC /* ShareArticleAction.appex */,
+				806B31F71BA333EE00163FFC /* ShareAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +295,40 @@
 			productReference = 806B318B1BA2FA8100163FFC /* News-Hack-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		806B31E21BA3333E00163FFC /* ShareArticleAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 806B31F11BA3333E00163FFC /* Build configuration list for PBXNativeTarget "ShareArticleAction" */;
+			buildPhases = (
+				806B31DF1BA3333E00163FFC /* Sources */,
+				806B31E01BA3333E00163FFC /* Frameworks */,
+				806B31E11BA3333E00163FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareArticleAction;
+			productName = ShareArticleAction;
+			productReference = 806B31E31BA3333E00163FFC /* ShareArticleAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		806B31F61BA333EE00163FFC /* ShareAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 806B32031BA333EE00163FFC /* Build configuration list for PBXNativeTarget "ShareAction" */;
+			buildPhases = (
+				806B31F31BA333EE00163FFC /* Sources */,
+				806B31F41BA333EE00163FFC /* Frameworks */,
+				806B31F51BA333EE00163FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareAction;
+			productName = ShareAction;
+			productReference = 806B31F71BA333EE00163FFC /* ShareAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,6 +344,12 @@
 					806B318A1BA2FA8100163FFC = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 806B31711BA2FA8000163FFC;
+					};
+					806B31E21BA3333E00163FFC = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					806B31F61BA333EE00163FFC = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -310,6 +368,8 @@
 			targets = (
 				806B31711BA2FA8000163FFC /* News-Hack-iOS */,
 				806B318A1BA2FA8100163FFC /* News-Hack-iOSTests */,
+				806B31E21BA3333E00163FFC /* ShareArticleAction */,
+				806B31F61BA333EE00163FFC /* ShareAction */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +387,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		806B31891BA2FA8100163FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31E11BA3333E00163FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31F51BA333EE00163FFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,6 +434,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				806B31921BA2FA8100163FFC /* News_Hack_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31DF1BA3333E00163FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B31F31BA333EE00163FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +625,54 @@
 			};
 			name = Release;
 		};
+		806B31EF1BA3333E00163FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareArticleAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		806B31F01BA3333E00163FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShareArticleAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		806B32041BA333EE00163FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		806B32051BA333EE00163FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShareAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,12 +692,30 @@
 				806B31971BA2FA8100163FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		806B31981BA2FA8100163FFC /* Build configuration list for PBXNativeTarget "News-Hack-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				806B31991BA2FA8100163FFC /* Debug */,
 				806B319A1BA2FA8100163FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		806B31F11BA3333E00163FFC /* Build configuration list for PBXNativeTarget "ShareArticleAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				806B31EF1BA3333E00163FFC /* Debug */,
+				806B31F01BA3333E00163FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		806B32031BA333EE00163FFC /* Build configuration list for PBXNativeTarget "ShareAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				806B32041BA333EE00163FFC /* Debug */,
+				806B32051BA333EE00163FFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

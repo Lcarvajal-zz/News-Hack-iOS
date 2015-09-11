@@ -27,7 +27,8 @@
         Article *article = [[Article alloc] init];
         article.title = [object valueForKey:@"title"];
         article.author = [[[object valueForKey:@"author"] lowercaseString] capitalizedString];
-        article.url = [self translateURL: [object valueForKey:@"url"]] ;
+        article.url = [self translateURL: [object valueForKey:@"url"]];
+        article.originalURL = [object valueForKey:@"url"];
         article.category = [object valueForKey:@"category"];
         article.snippet = [object valueForKey:@"snippet"];
         

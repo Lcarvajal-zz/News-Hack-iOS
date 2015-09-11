@@ -91,9 +91,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //self.tableView.delegate = self;
-    //self.tableView.dataSource = self;
-    
     // remove cell selection
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -117,6 +114,7 @@
         ArticleViewController *controller = (ArticleViewController*)navController.topViewController;
         controller.articleTitle = object.title;
         controller.articleURL = object.url;
+        controller.originalURL = object.originalURL;
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
